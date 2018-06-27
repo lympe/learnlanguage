@@ -10,7 +10,7 @@ export default class Chat extends Component {
   render() {
     return (
       <AnimatedScreen from="left" duration={150} style={styles.container}>
-        <Text>Chat</Text>
+        <Text>Coming soon</Text>
       </AnimatedScreen>
     );
   }
