@@ -24,7 +24,8 @@ class FirstOpenPop extends Component {
       page: 'langue'
     };
   }
-
+  googleConnect() {}
+  facebookConnect() {}
   _onClick() {
     //this.props.changeFirstTime();
   }
@@ -104,7 +105,7 @@ class FirstOpenPop extends Component {
             btnSize={styles.loginBtn}
             text="Connexion avec Google"
             to="List"
-            onClick={() => this._onClick()}
+            onClick={() => this.googleConnect()}
           />
           <View style={{ height: 20 }} />
           <Btn
@@ -117,7 +118,7 @@ class FirstOpenPop extends Component {
             btnSize={styles.loginBtn}
             text="Connexion avec Facebook"
             to="List"
-            onClick={() => this._onClick()}
+            onClick={() => this.facebookConnect()}
           />
         </View>
       );

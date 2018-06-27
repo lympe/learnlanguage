@@ -46,6 +46,8 @@ export default (state = INITIAL_STATE, action) => {
         prop: [],
         letters: [],
         letterNumber: 1,
+        heart: 3,
+        goodAnswer: 0,
         wordNumber: 0,
         wordsKnown: 0,
         propositions: action.payload.propositions
