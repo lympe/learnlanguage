@@ -4,7 +4,6 @@ import List from './List';
 import Game from './Game';
 import Settings from './Settings';
 import Footer from '../components/Footer';
-import Login from './Login';
 import Duel from './Duel';
 import Shop from './Shop';
 import Chat from './Chat';
@@ -13,8 +12,9 @@ import Victory from './Victory';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import LastChancePop from '../pops/LastChancePop';
-import FirstOpenPop from '../pops/FirstOpenPop';
+import LoginPop from '../pops/LoginPop';
 import AnswerPop from '../pops/AnswerPop';
+import LangPickerPop from '../pops/LangPickerPop';
 
 class Nav extends Component {
   _renderContent() {
@@ -32,10 +32,16 @@ class Nav extends Component {
           <LastChancePop />
         </Pop>
       );
-    if (this.props.firstTime)
+    if (!this.props.logedIn)
       return (
         <Pop canClose={false}>
-          <FirstOpenPop />
+          <LoginPop />
+        </Pop>
+      );
+    if (this.props.pop === 'LangPickerPop')
+      return (
+        <Pop>
+          <LangPickerPop />
         </Pop>
       );
     if (this.props.pop === 'AnswerPop')
@@ -85,11 +91,11 @@ const styles = StyleSheet.create({
 
 function mapStateToProps({ nav, settings }) {
   const { view, pop } = nav;
-  const { firstTime } = settings;
+  const { logedIn } = settings;
   return {
     view,
     pop,
-    firstTime
+    logedIn
   };
 }
 

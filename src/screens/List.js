@@ -16,6 +16,7 @@ import AnimatedScreen from '../components/AnimatedScreen';
 import Header from '../components/Header';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+import lang from '../lang.json';
 
 var WIDTH = Dimensions.get('window').width;
 var HEIGHT = Dimensions.get('window').height;
@@ -144,7 +145,7 @@ class List extends Component {
               fontSize={40}
               btnSize={styles.btn}
               animate={false}
-              text="Jouer"
+              text={lang.playBtn[this.props.lang]}
               to="Game"
               onClick={() => this.play()}
             />

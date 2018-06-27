@@ -1,0 +1,42 @@
+{
+  "playBtn": {
+    "fr": "jouer",
+    "en": "play"
+  },
+  "facebookSignIn": {
+    "fr": "Se connecter avec Facebook",
+    "en": "Sign in with Facebook"
+  },
+  "googleSignIn": {
+    "fr": "Se connecter avec Google",
+    "en": "Sign in with Google"
+  },
+  "iSpeak": {
+    "fr": "Je parle",
+    "en": "I speak",
+    "it": "Io parlo",
+    "ko": "나는 말한다",
+    "du": "Ich spreche",
+    "sp": "Yo hablo",
+    "jp": "私は話す",
+    "ch": "我說話"
+  },
+  "next": {
+    "fr": "Suivant",
+    "en": "Next",
+    "it": "Seguente",
+    "ko": "다음의",
+    "du": "Folgende",
+    "sp": "Próximo",
+    "jp": "以下",
+    "ch": "以下"
+  },
+  "signOut": {
+    "fr": "Déconnexion",
+    "en": "Sign out"
+  },
+  "changeLang": {
+    "fr": "Changer de langue",
+    "en": "Change language"
+  }
+}

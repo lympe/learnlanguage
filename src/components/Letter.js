@@ -48,11 +48,13 @@ class Letter extends Component {
     }
   }
   _onClick() {
-    this.props.removeLetter(
-      this.props.letters,
-      this.props.ind,
-      this.props.prop
-    );
+    if (this.props.letters[this.props.ind]) {
+      this.props.removeLetter(
+        this.props.letters,
+        this.props.ind,
+        this.props.prop
+      );
+    }
   }
   render() {
     const container = {

@@ -3,7 +3,8 @@ import {
   CHANGE_FIRST_TIME,
   GOOGLE_LOGIN,
   FACEBOOK_LOGIN,
-  FACEBOOK_LOGIN_FAIL
+  FACEBOOK_LOGIN_FAIL,
+  LOGOUT
 } from './types';
 import Expo from 'expo';
 
@@ -27,16 +28,24 @@ export const googleConnect = () => {
     type: GOOGLE_LOGIN
   };
 };
+export const logout = () => {
+  return {
+    type: LOGOUT
+  };
+};
 const doFacebookLogin = async dispatch => {
   let { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync(
     '1858129071158246',
     {
-      permissions: ['public_profile']
+      permissions: ['public_profile', 'email']
     }
   );
   if (type === 'cancel') {
     return dispatch({ type: FACEBOOK_LOGIN_FAIL });
   }
-  alert(token);
+  const response = await fetch(
+    `https://graph.facebook.com/me?access_token=${token}`
+  );
+  await alert(JSON.stringify(response.json()));
   return dispatch({ type: FACEBOOK_LOGIN });
 };

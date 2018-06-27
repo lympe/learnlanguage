@@ -20,7 +20,7 @@ class Button extends Component {
     this.state = {
       visible: true,
       translateY: new Animated.Value(-5),
-      scale: new Animated.Value(this.props.animate === false ? 1 : 0)
+      scale: new Animated.Value(0)
     };
   }
   componentDidMount() {
@@ -116,6 +116,7 @@ const styles = StyleSheet.create({
   wrapper: {
     width: 50,
     height: 70,
+    marginTop: 5,
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center'

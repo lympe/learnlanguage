@@ -17,3 +17,4 @@ export const CHANGE_FIRST_TIME = 'change_first_time';
 export const GOOGLE_LOGIN = 'google_login';
 export const FACEBOOK_LOGIN = 'facebook_login';
 export const FACEBOOK_LOGIN_FAIL = 'facebook_login_fail';
+export const LOGOUT = 'logout';
